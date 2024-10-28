@@ -58,6 +58,13 @@ Para instalar o **pytest**, você pode usar o `pip`. Execute o seguinte comando 
 ```bash
 pip install pytest
 ````
+## Explicação do Código
+
+A **RestauranteAPI** é estruturada utilizando uma arquitetura de **microserviços**, onde cada serviço é responsável por uma funcionalidade específica do sistema. Essa abordagem permite maior escalabilidade e manutenção do código, uma vez que cada microserviço pode ser desenvolvido, testado e implantado de forma independente.
+
+Cada microserviço está isolado em seu próprio **ambiente virtual** utilizando o **virtualenv**, o que garante que as dependências de cada serviço não conflitem entre si. Essa prática facilita a gestão das bibliotecas e versões necessárias para o funcionamento de cada parte da API, promovendo um desenvolvimento mais organizado e eficiente.
+
+A modularidade da aplicação permite que novos serviços sejam facilmente adicionados ou modificados sem impactar outros componentes do sistema, tornando a arquitetura mais flexível e adaptável a mudanças.
 
 
 
