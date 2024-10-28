@@ -72,11 +72,11 @@ A modularidade da aplicação permite que novos serviços sejam facilmente adici
 
 ```python
 from chalice import Chalice
-A biblioteca Chalice é importada para criar a aplicação serverless.
 ````
+
+A biblioteca Chalice é importada para criar a aplicação serverless.
 Inicialização da Aplicação
 ````python
-Copiar código
 app = Chalice(app_name='consumers')
 ````
 A aplicação Chalice é inicializada com o nome consumers, que identifica a API.
@@ -100,8 +100,10 @@ companies = {
         {"name": "Usuario03", "phone": "479999999"}
     ]
 }
-Endpoints para Consumidores (Clientes)
 ````
+
+Endpoints para Consumidores (Clientes)
+
 Criar Usuário
 ````python
 @app.route('/consumers/person', methods=["POST"])
@@ -114,7 +116,6 @@ Descrição: Cria um novo usuário com os dados fornecidos no corpo da requisiç
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Atualizar Usuário
 ````python
-Copiar código
 @app.route('/consumers/person', methods=["PUT"])
 def UpdateUser():
     ...
@@ -125,7 +126,6 @@ Descrição: Atualiza os dados de um usuário existente com os dados fornecidos 
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Deletar Usuário
 ````python
-Copiar código
 @app.route('/consumers/person', methods=["DELETE"])
 def DeleteUser():
     ...
@@ -136,7 +136,6 @@ Descrição: Remove um usuário com base nos dados fornecidos no corpo da requis
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Obter Todos os Usuários
 ````python
-Copiar código
 @app.route('/consumers/person', methods=["GET"])
 def GetUser():
     ...
@@ -148,7 +147,6 @@ Resposta: Retorna os dados dos usuários com o status code 200.
 
 Obter Usuário por ID
 ````python
-Copiar código
 @app.route('/consumers/person/{id}', methods=["GET"])
 def GetUser(id):
     ...
@@ -163,7 +161,6 @@ Os endpoints para empresas seguem a mesma estrutura que os de usuários, permiti
 
 Criar Empresa
 ````python
-Copiar código
 @app.route('/consumers/company', methods=["POST"])
 def CreateUser():
     ...
@@ -174,7 +171,6 @@ Descrição: Cria uma nova empresa com os dados fornecidos no corpo da requisiç
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Atualizar Empresa
 ````python
-Copiar código
 @app.route('/consumers/company', methods=["PUT"])
 def UpdateUser():
     ...
@@ -185,7 +181,6 @@ Descrição: Atualiza os dados de uma empresa existente com os dados fornecidos 
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Deletar Empresa
 ````python
-Copiar código
 @app.route('/consumers/company', methods=["DELETE"])
 def DeleteUser():
     ...
@@ -196,7 +191,6 @@ Descrição: Remove uma empresa com base nos dados fornecidos no corpo da requis
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Obter Todas as Empresas
 ````python
-Copiar código
 @app.route('/consumers/company', methods=["GET"])
 def GetUser():
     ...
@@ -207,7 +201,6 @@ Descrição: Retorna a lista de todas as empresas.
 Resposta: Retorna os dados das empresas com o status code 200.
 Obter Empresa por ID
 ````python
-Copiar código
 @app.route('/consumers/company/{id}', methods=["GET"])
 def GetUser(id):
     ...
@@ -218,8 +211,10 @@ def GetUser(id):
 
 ```python
 from chalice import Chalice
+````
+
 A biblioteca Chalice é importada para criar a aplicação serverless.
-```
+
 Inicialização da Aplicação
 ```python
 app = Chalice(app_name='products')
@@ -230,7 +225,6 @@ Estruturas de Dados
 Um dicionário é usado para armazenar dados de teste de produtos:
 
 ```python
-Copiar código
 users = {
     "users": [
         {"products": "A", "amounts": "4"},
@@ -242,7 +236,6 @@ users = {
 Endpoints para Produtos
 Criar Produto
 ```python
-Copiar código
 @app.route('/products', methods=["POST"])
 def CreateUser():
     ...
@@ -252,7 +245,6 @@ Descrição: Cria um novo produto com os dados fornecidos no corpo da requisiç�
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Atualizar Produto
 ```python
-Copiar código
 @app.route('/products', methods=["PUT"])
 def UpdateUser():
     ...
@@ -262,7 +254,6 @@ Descrição: Atualiza os dados de um produto existente com os dados fornecidos n
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Deletar Produto
 ```python
-Copiar código
 @app.route('/products', methods=["DELETE"])
 def DeleteUser():
     ...
@@ -272,7 +263,6 @@ Descrição: Remove um produto com base nos dados fornecidos no corpo da requisi
 Resposta: Retorna uma mensagem de sucesso com o status code 200.
 Obter Todos os Produtos
 ```python
-Copiar código
 @app.route('/products', methods=["GET"])
 def GetUser():
     ...
@@ -282,7 +272,6 @@ Descrição: Retorna a lista de todos os produtos.
 Resposta: Retorna os dados dos produtos com o status code 200.
 Obter Produto por ID
 ```python
-Copiar código
 @app.route('/products/{id}', methods=["GET"])
 def GetUser(id):
     ...
@@ -290,6 +279,146 @@ def GetUser(id):
 Método: GET
 Descrição: Retorna os dados de um produto específico baseado no ID fornecido na URL.
 Resposta: Retorna os dados do produto com o status code 200.
+
+## Documentação do Código - Vendas
+
+### Importações
+
+```python
+from chalice import Chalice
+```
+A biblioteca Chalice é importada para criar a aplicação serverless.
+
+Inicialização da Aplicação
+```python
+Copiar código
+app = Chalice(app_name='sales')
+```
+A aplicação Chalice é inicializada com o nome sales, que identifica a API.
+
+Estruturas de Dados
+Um dicionário é usado para armazenar dados de teste de vendas:
+
+```python
+Copiar código
+sales = {
+    "sales": [
+        {"consumer": "venda01", "value": "23.2", "food": "macarrão"},
+        {"consumer": "venda01", "value": "32.1", "food": "abacate"},
+        {"consumer": "venda01", "value": "2.00", "food": "suco"}
+    ]    
+}
+```
+Endpoints para Vendas
+Vendas Online
+Criar Venda Online
+````python
+Copiar código
+@app.route('/sales/online', methods=["POST"])
+def CreateUser():
+    ...
+````
+Método: POST
+Descrição: Cria uma nova venda online com os dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Atualizar Venda Online
+````python
+Copiar código
+@app.route('/sales/online', methods=["PUT"])
+def UpdateUser():
+    ...
+Método: PUT
+Descrição: Atualiza os dados de uma venda online existente com os dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Deletar Venda Online
+python
+Copiar código
+@app.route('/sales/online', methods=["DELETE"])
+def DeleteUser():
+    ...
+````
+Método: DELETE
+Descrição: Remove uma venda online com base nos dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Obter Todas as Vendas Online
+````python
+Copiar código
+@app.route('/sales/online', methods=["GET"])
+def GetUser():
+    ...
+````
+Método: GET
+Descrição: Retorna a lista de todas as vendas online.
+Resposta: Retorna os dados das vendas online com o status code 200.
+Obter Venda Online por ID
+````python
+Copiar código
+@app.route('/sales/online/{id}', methods=["GET"])
+def GetUser(id):
+    ...
+````
+Método: GET
+Descrição: Retorna os dados de uma venda online específica baseada no ID fornecido na URL.
+Resposta: Retorna os dados da venda online com o status code 200.
+Vendas Offline
+Criar Venda Offline
+````python
+Copiar código
+@app.route('/sales/offline', methods=["POST"])
+def CreateUser():
+    ...
+````
+Método: POST
+Descrição: Cria uma nova venda offline com os dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Atualizar Venda Offline
+````python
+Copiar código
+@app.route('/sales/offline', methods=["PUT"])
+def UpdateUser():
+    ...
+````
+Método: PUT
+Descrição: Atualiza os dados de uma venda offline existente com os dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Deletar Venda Offline
+
+````python
+Copiar código
+@app.route('/sales/offline', methods=["DELETE"])
+def DeleteUser():
+    ...
+````
+Método: DELETE
+Descrição: Remove uma venda offline com base nos dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Obter Todas as Vendas Offline
+````python
+Copiar código
+@app.route('/sales/offline', methods=["GET"])
+def GetUser():
+    ...
+````
+Método: GET
+Descrição: Retorna a lista de todas as vendas offline.
+Resposta: Retorna os dados das vendas offline com o status code 200.
+Obter Venda Offline por ID
+````python
+Copiar código
+@app.route('/sales/offline/{id}', methods=["GET"])
+def GetUser(id):
+    ...
+````
+Método: GET
+Descrição: Retorna os dados de uma venda offline específica baseada no ID fornecido na URL.
+Resposta: Retorna os dados da venda offline com o status code 200.
+
+
+
+
+
+
+
 
 
 
