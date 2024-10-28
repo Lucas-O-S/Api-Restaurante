@@ -22,6 +22,44 @@ A **RestauranteAPI** é organizada em três principais áreas de negócio:
 
 Cada área possui operações completas de CRUD (Create, Read, Update, Delete) para facilitar o gerenciamento.
 
+## Bibliotecas Utilizadas
+
+A **RestauranteAPI** faz uso de várias bibliotecas para facilitar o desenvolvimento e garantir um ambiente de trabalho eficiente. As principais bibliotecas incluem:
+
+### 1. Chalice
+
+**Chalice** é um framework Python que simplifica a criação de APIs serverless na AWS. Ele permite que você escreva código Python e crie rapidamente APIs RESTful, aproveitando os recursos do AWS Lambda.
+
+**Instalação**:
+```bash
+pip install chalice
+```
+
+### virtualenv
+
+**virtualenv** é uma ferramenta que permite criar ambientes virtuais isolados para projetos Python. Isso é especialmente útil para gerenciar dependências de diferentes projetos, garantindo que cada um utilize suas próprias versões de bibliotecas, sem conflitos entre elas.
+
+#### Instalação
+
+Para instalar o **virtualenv**, você pode usar o `pip`. Execute o seguinte comando em seu terminal:
+
+```bash
+pip install virtualenv
+````
+
+### Pytest
+
+**pytest** é uma estrutura de testes para Python que permite a escrita de testes de forma simples e escalável. Ele suporta testes de unidade e integração, tornando-se uma ferramenta valiosa para garantir que seu código funcione conforme o esperado. O pytest também fornece uma rica variedade de recursos, como fixtures, parametrização de testes e relatórios detalhados.
+
+#### Instalação
+
+Para instalar o **pytest**, você pode usar o `pip`. Execute o seguinte comando em seu terminal:
+
+```bash
+pip install pytest
+````
+
+
 
 
 
