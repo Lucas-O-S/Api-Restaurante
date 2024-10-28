@@ -212,10 +212,85 @@ Copiar código
 def GetUser(id):
     ...
 ````
+## Documentação do Código - Produtos
 
+### Importações
+
+```python
+from chalice import Chalice
+A biblioteca Chalice é importada para criar a aplicação serverless.
+```
+Inicialização da Aplicação
+```python
+app = Chalice(app_name='products')
+```
+A aplicação Chalice é inicializada com o nome products, que identifica a API.
+
+Estruturas de Dados
+Um dicionário é usado para armazenar dados de teste de produtos:
+
+```python
+Copiar código
+users = {
+    "users": [
+        {"products": "A", "amounts": "4"},
+        {"products": "B", "amounts": "3"},
+        {"products": "C", "amounts": "1"}
+    ]    
+}
+```
+Endpoints para Produtos
+Criar Produto
+```python
+Copiar código
+@app.route('/products', methods=["POST"])
+def CreateUser():
+    ...
+```
+Método: POST
+Descrição: Cria um novo produto com os dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Atualizar Produto
+```python
+Copiar código
+@app.route('/products', methods=["PUT"])
+def UpdateUser():
+    ...
+```
+Método: PUT
+Descrição: Atualiza os dados de um produto existente com os dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Deletar Produto
+```python
+Copiar código
+@app.route('/products', methods=["DELETE"])
+def DeleteUser():
+    ...
+```
+Método: DELETE
+Descrição: Remove um produto com base nos dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Obter Todos os Produtos
+```python
+Copiar código
+@app.route('/products', methods=["GET"])
+def GetUser():
+    ...
+```
 Método: GET
-Descrição: Retorna os dados de uma empresa específica baseada no ID fornecido na URL.
-Resposta: Retorna os dados da empresa com o status code 200.
+Descrição: Retorna a lista de todos os produtos.
+Resposta: Retorna os dados dos produtos com o status code 200.
+Obter Produto por ID
+```python
+Copiar código
+@app.route('/products/{id}', methods=["GET"])
+def GetUser(id):
+    ...
+```
+Método: GET
+Descrição: Retorna os dados de um produto específico baseado no ID fornecido na URL.
+Resposta: Retorna os dados do produto com o status code 200.
+
 
 
 
