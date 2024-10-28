@@ -66,7 +66,156 @@ Cada microserviço está isolado em seu próprio **ambiente virtual** utilizando
 
 A modularidade da aplicação permite que novos serviços sejam facilmente adicionados ou modificados sem impactar outros componentes do sistema, tornando a arquitetura mais flexível e adaptável a mudanças.
 
+## Documentação do Código - Clientes
 
+### Importações
+
+```python
+from chalice import Chalice
+A biblioteca Chalice é importada para criar a aplicação serverless.
+````
+Inicialização da Aplicação
+````python
+Copiar código
+app = Chalice(app_name='consumers')
+````
+A aplicação Chalice é inicializada com o nome consumers, que identifica a API.
+
+Estruturas de Dados
+Dicionários são usados para armazenar dados de teste de usuários e empresas:
+
+````python
+users = {
+    "users": [
+        {"name": "Usuario01", "phone": "479999999"},
+        {"name": "Usuario02", "phone": "479999999"},
+        {"name": "Usuario03", "phone": "479999999"}
+    ]    
+}
+
+companies = {
+    "companies": [
+        {"name": "Usuario01", "phone": "479999999"},
+        {"name": "Usuario02", "phone": "479999999"},
+        {"name": "Usuario03", "phone": "479999999"}
+    ]
+}
+Endpoints para Consumidores (Clientes)
+````
+Criar Usuário
+````python
+@app.route('/consumers/person', methods=["POST"])
+def CreateUser():
+    ...
+````
+Método: POST
+Descrição: Cria um novo usuário com os dados fornecidos no corpo da requisição.
+
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Atualizar Usuário
+````python
+Copiar código
+@app.route('/consumers/person', methods=["PUT"])
+def UpdateUser():
+    ...
+````
+Método: PUT
+Descrição: Atualiza os dados de um usuário existente com os dados fornecidos no corpo da requisição.
+
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Deletar Usuário
+````python
+Copiar código
+@app.route('/consumers/person', methods=["DELETE"])
+def DeleteUser():
+    ...
+````
+
+Método: DELETE
+Descrição: Remove um usuário com base nos dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Obter Todos os Usuários
+````python
+Copiar código
+@app.route('/consumers/person', methods=["GET"])
+def GetUser():
+    ...
+````
+
+Método: GET
+Descrição: Retorna a lista de todos os usuários.
+Resposta: Retorna os dados dos usuários com o status code 200.
+
+Obter Usuário por ID
+````python
+Copiar código
+@app.route('/consumers/person/{id}', methods=["GET"])
+def GetUser(id):
+    ...
+````
+
+Método: GET
+Descrição: Retorna os dados de um usuário específico baseado no ID fornecido na URL.
+Resposta: Retorna os dados do usuário com o status code 200.
+
+Endpoints para Empresas
+Os endpoints para empresas seguem a mesma estrutura que os de usuários, permitindo a criação, atualização, exclusão e obtenção de dados de empresas.
+
+Criar Empresa
+````python
+Copiar código
+@app.route('/consumers/company', methods=["POST"])
+def CreateUser():
+    ...
+````
+
+Método: POST
+Descrição: Cria uma nova empresa com os dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Atualizar Empresa
+````python
+Copiar código
+@app.route('/consumers/company', methods=["PUT"])
+def UpdateUser():
+    ...
+````
+
+Método: PUT
+Descrição: Atualiza os dados de uma empresa existente com os dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Deletar Empresa
+````python
+Copiar código
+@app.route('/consumers/company', methods=["DELETE"])
+def DeleteUser():
+    ...
+````
+
+Método: DELETE
+Descrição: Remove uma empresa com base nos dados fornecidos no corpo da requisição.
+Resposta: Retorna uma mensagem de sucesso com o status code 200.
+Obter Todas as Empresas
+````python
+Copiar código
+@app.route('/consumers/company', methods=["GET"])
+def GetUser():
+    ...
+````
+
+Método: GET
+Descrição: Retorna a lista de todas as empresas.
+Resposta: Retorna os dados das empresas com o status code 200.
+Obter Empresa por ID
+````python
+Copiar código
+@app.route('/consumers/company/{id}', methods=["GET"])
+def GetUser(id):
+    ...
+````
+
+Método: GET
+Descrição: Retorna os dados de uma empresa específica baseada no ID fornecido na URL.
+Resposta: Retorna os dados da empresa com o status code 200.
 
 
 
