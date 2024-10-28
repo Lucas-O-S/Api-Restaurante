@@ -1,0 +1,706 @@
+{
+	"info": {
+		"_postman_id": "5bedac58-9f4e-4914-a5b5-4b2f34b22f9f",
+		"name": "Api Restaurante",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39313683"
+	},
+	"item": [
+		{
+			"name": "Consumers",
+			"item": [
+				{
+					"name": "Fisico",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/person",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"person"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/person/1",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"person",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\": \"Usuario01\", \"phone\": \"479999999\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/person",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"person"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/person",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"person"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/person",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"person"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "acesso a funções de um cliente que seja uma pessoa"
+				},
+				{
+					"name": "Juridico",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/company",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"company"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/company/1",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"company",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\": \"Usuario01\", \"phone\": \"479999999\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/company",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"company"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/company",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"company"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://x8or9fiht7.execute-api.us-east-2.amazonaws.com/api//consumers/company",
+									"protocol": "https",
+									"host": [
+										"x8or9fiht7",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"",
+										"consumers",
+										"company"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "acesso a funções de um cliente que seja uma empresa"
+				}
+			],
+			"description": "Grupo de funções da api de clientes"
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://8nyvqovq9c.execute-api.us-east-2.amazonaws.com/api/products",
+							"protocol": "https",
+							"host": [
+								"8nyvqovq9c",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://8nyvqovq9c.execute-api.us-east-2.amazonaws.com/api/products/1",
+							"protocol": "https",
+							"host": [
+								"8nyvqovq9c",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Usuario01\", \"phone\": \"479999999\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://8nyvqovq9c.execute-api.us-east-2.amazonaws.com/api/products",
+							"protocol": "https",
+							"host": [
+								"8nyvqovq9c",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://8nyvqovq9c.execute-api.us-east-2.amazonaws.com/api/products",
+							"protocol": "https",
+							"host": [
+								"8nyvqovq9c",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://8nyvqovq9c.execute-api.us-east-2.amazonaws.com/api/products",
+							"protocol": "https",
+							"host": [
+								"8nyvqovq9c",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Grupo de funções da api de produtos"
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "Offline",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/offline",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"offline"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/offline/1",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"offline",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"consumer\": \"venda01\", \"value\": \"2.00\", \"food\": \"suco\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/offline",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"offline"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/offline",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"offline"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/offline",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"offline"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "acesso a funções de vendas offline"
+				},
+				{
+					"name": "Online",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/online",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"online"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/online",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"online"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"consumer\": \"venda01\", \"value\": \"2.00\", \"food\": \"suco\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/online",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"online"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/online",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"online"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://23d66ksdn9.execute-api.us-east-2.amazonaws.com/api/sales/online",
+									"protocol": "https",
+									"host": [
+										"23d66ksdn9",
+										"execute-api",
+										"us-east-2",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"api",
+										"sales",
+										"online"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "acesso a funções de vendas online"
+				}
+			],
+			"description": "Grupo de funções da api de vendas"
+		}
+	]
+}
