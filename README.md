@@ -8,6 +8,8 @@ Esta API foi projetada para ser independente, sem conexão com um backend tradic
 
 ## Regras de Negócio
 
+![Imagem da Regra de Negocio](Regradenegocio.png)
+
 A **RestauranteAPI** é organizada em três principais áreas de negócio:
 
 1. **Cadastro de Clientes**: O cadastro de clientes é dividido em duas categorias:
